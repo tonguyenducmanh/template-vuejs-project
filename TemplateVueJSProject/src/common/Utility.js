@@ -33,18 +33,6 @@ class Utility {
       }
     }
   }
-  /**
-   * hàm format string giống như String.Format của C#
-   * @param {*} template chuỗi string cần formart
-   * @param  {...any} args danh sách các trường format
-   * @returns string đã được format
-   * Created by tdmanh1 19/09/2024
-   */
-  formatString(template, ...args) {
-    return template.replace(/{(\d+)}/g, (match, number) => {
-      return typeof args[number] !== 'undefined' ? args[number] : match
-    })
-  }
 }
 
 export default new Utility()
